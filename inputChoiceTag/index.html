@@ -1,0 +1,94 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh" lang="zh"> 
+<head>  
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9;IE=Edge" >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<title>input框选择多标签</title> 
+<link rel="stylesheet" href='inputChoiceTag.css'/> 
+<script type="text/javascript" src="jquery-1.11.0.min.js"></script>   
+<style> 
+*{padding:0;margin:0}
+body{
+	font-family:黑体,微软雅虎;
+	font-size:15px;
+	background:#E4E1D7;
+}
+#main{
+	width:500px;
+	margin:0 auto;
+	margin-top:200px;
+}
+.inputBoard{
+	margin:25px;
+}
+.inputBoard .inputChoiceTag{
+  padding:5px;
+}
+.inputChoiceInput{
+	line-height:25px;
+}
+</style>
+</head>
+<body> 
+	<div id='main'>		 
+			<div class='inputBoard'>	  
+				<span class='inputChoiceTag'>
+				  <span class="input-tag-list" id='investField_name'>  
+				  </span>
+				  <span>
+					<input class="inputChoiceInput" id='investField' onfocus='showInputWindow(this,"#window1","","investField")' value="点击选择城市" type="text" style='color:#666;border:0;width:auto'>
+				  </span>
+				</span>	 
+				<input name="investField_id'" id='investField_id' value="" type="hidden"/> 
+				 
+ 
+				<!-----加载显示已经创建的项目名称---->
+				<div class="showInputWindow" id='window1'>
+				  <div class="title">
+					<span>请选择:</span>
+				  </div> 
+				  <div class="list">
+					<ul>
+					</ul>
+					<div class='loadIcon'></div>
+				  </div>
+				  <div class="button">
+					<button id='flag' onclick='remShowInpWin()'>取消</button> 
+				  </div>
+				</div> 
+	 		 </div>
+ 		  	 
+			<div class='inputBoard'>  
+					<span class='inputChoiceTag'>
+					  <span class="input-tag-list" id='investProject_name'>  
+					  </span>
+					  <span>
+						<input class="inputChoiceInput" id='investProject' onfocus='showInputWindow(this,"#window2","1","investProject")' value="点击选中项目" type="text" style='color:#666;border:0;width:auto'>
+					  </span>
+					</span>	 
+					<input name="investProject_id'"  id='investProject_id' value="" type="hidden"/>
+				 
+			  
+				<!-----加载显示已经创建的项目名称---->
+				<div class="showInputWindow" id='window2'>
+				  <div class="title">
+					<span>请选择:</span>
+				  </div> 
+				  <div class="list">
+					<ul>
+					</ul>
+					<div class='loadIcon'></div>
+				  </div>
+				  <div class="button">
+					<button id='flag' onclick='remShowInpWin()'>取消</button> 
+				  </div>
+				</div>  
+		</div>		
+   </div>		
+	 
+	<script type="text/javascript" src="inputChoiceTag.js"></script> 
+	 
+</body>
+</html>
